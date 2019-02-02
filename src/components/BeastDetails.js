@@ -2,9 +2,9 @@ import React from 'react';
 import SpecialAbilityDetail from './SpecialAbilityDetail';
 import ActionDetails from './ActionDetails';
 
-const BeastDetails = ({name, details}) => (
+const BeastDetails = ({details}) => (
     <div>
-        <h1>{name}</h1>
+        <h1>{details.name}</h1>
         <p>
             <em>Size: </em>
             <span>{details.size}</span>
@@ -61,3 +61,5 @@ const BeastDetails = ({name, details}) => (
         <ActionDetails actions={details.actions} />
     </div>
 )
+
+export default BeastDetails;

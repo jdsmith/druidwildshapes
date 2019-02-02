@@ -1,0 +1,10 @@
+exports.CR_ZERO = 0;
+exports.CR_ONE_EIGHTH = 0.125
+exports.CR_ONE_QUARTER = 0.25;
+exports.CR_ONE_HALF = 0.5;
+exports.CR_ONE = 1;
+exports.CR_TWO = 2;
+exports.CR_THREE = 3;
+exports.CR_FOUR = 4;
+exports.CR_FIVE = 5;
+exports.CR_SIX = 6;

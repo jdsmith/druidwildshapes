@@ -14,7 +14,7 @@ class DruidContainer extends React.Component {
     }
 
     fetchWildShapes(level, isCircleOfTheMoon) {
-        return Axios.get(`/wildshapes/${level}`, {
+        return Axios.get(`/api/wildshapes/${level}`, {
             params: {
                 isCircleOfTheMoon
             }

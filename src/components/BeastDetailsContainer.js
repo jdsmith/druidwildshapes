@@ -2,20 +2,25 @@ import React from 'react';
 import axios from 'axios';
 import BeastDetails from './BeastDetails';
 
-const monsterApiUrl = '/wildshapes/';
+const monsterApiUrl = '/api/wildshape/';
 
 class BeastDetailsContainer extends React.Component {
     constructor(props) {
         super(props);
+        this.state = {};
         this.fetchBeastDetails = this.fetchBeastDetails.bind(this);
     }
 
     fetchBeastDetails(beastId) {
-        const endpoint = `${monsterApiUrl}${beastId}/`;
+        const endpoint = `${monsterApiUrl}${beastId}`;
         return axios.get(endpoint)
             .then(response => response.data)
-            .then(beastDetails => this.setState({ beastDetails }))
-            .catch(error => this.setState({error}));
+            .then(beastDetails =>  {
+                this.setState({ beastDetails });
+            })
+            .catch(error => {
+                this.setState({error})
+            });
     }
 
     componentDidMount() {
@@ -24,7 +29,8 @@ class BeastDetailsContainer extends React.Component {
     }
 
     render() {
-        return <BeastDetails details={this.state.beastDetails} />
+        return this.state.beastDetails ? 
+            <BeastDetails details={this.state.beastDetails} /> : null;
     }
 }
 

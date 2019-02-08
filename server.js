@@ -1,31 +1,48 @@
 const getWildShapes = require('./src/api/druidWildShapeView');
+const getWildShapeDetails = require('./src/api/wildShapeDetailsView');
 
 const Hapi = require('hapi');
 const Path = require('path');
 const Inert = require('inert');
 
-const server = Hapi.server({ port: 3000 });
+const server = Hapi.server({
+    routes: {
+        files: {
+            relativeTo: Path.join(__dirname, 'build')
+        }
+    },
+    port: 3000,
+    host: 'localhost'
+});
 const routes = [
     {
         method: 'GET',
-        path: '/wildshapes/{level}',
+        path: '/api/wildshapes/{level}',
         handler: getWildShapes
     },
     {
         method: 'GET',
-        path: '/wildshapes',
-        handler: (request) => 'Get your wildshapes here!'
+        path: '/api/wildshape/{id}',
+        handler: getWildShapeDetails
     },
     {
         method: 'GET',
-        path: '/{path*}',
+        path: '/wildshapes/{path*}',
+        handler: {
+            file: 'index.html'
+        }
+    }, 
+    {
+        method: 'GET',
+        path: '/{param*}',
         handler: {
             directory: {
-                path: Path.join(__dirname, 'build'),
-                index: ['index.html']
+                path: '.',
+                redirectToSlash: true,
+                index: true,
             }
         }
-    }
+    },
 ];
 
 const start = async () => {

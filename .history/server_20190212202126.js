@@ -4,7 +4,7 @@ const getWildShapeDetails = require('./src/api/wildShapeDetailsView');
 const Hapi = require('hapi');
 const Path = require('path');
 const Inert = require('inert');
-const port = ~~process.env.PORT || 9001
+const port = process.env.PORT || 9001
 
 const server = Hapi.server({
     routes: {
@@ -13,7 +13,7 @@ const server = Hapi.server({
         }
     },
     port: port,
-    host: '0.0.0.0'
+    host: 0.0.0.0
 });
 const routes = [
     {

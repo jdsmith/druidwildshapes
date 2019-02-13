@@ -11,6 +11,6 @@ pipelines:
         caches:
           - node
         script:
-          - npm ci
+          - npm install
           - npm test
           - npm run build

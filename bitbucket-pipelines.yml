@@ -21,6 +21,14 @@ pipelines:
             - docker build -t druid-wildshapes:latest .
           services:
             - docker
+      - step:
+          name: 'Tag and Push to Heroku'
+          script:
+            - docker login --username $HEROKU_USERNAME --password=$HEROKU_PASSWORD $HEROKU_REGISTRY
+            - docker tag druid-wildshapes:latest $HEROKU_REGISTRY/druid-wildshapes/web
+            - docker push $HEROKU_REGISTRY/druid-wildshapes/web
+          services:
+            - docker
   default:
     - step:
         name: 'Node test and build'

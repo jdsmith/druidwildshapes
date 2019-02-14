@@ -6,8 +6,23 @@
 image: node:8.15.0
 
 pipelines:
+  branches:
+    master:
+      - step:
+        name: 'Run Jest Tests'
+        caches:
+          - node
+        script:
+          - npm install
+          - npm test
+      - step:
+        name: 'Build Docker Container'
+        script:
+          - docker build -t druid-wildshapes:latest .
+
   default:
     - step:
+        name: 'Node test and build'
         caches:
           - node
         script:

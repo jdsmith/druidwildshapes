@@ -19,11 +19,15 @@ pipelines:
           name: 'Build Docker Container'
           script:
             - docker build -t druid-wildshapes:latest .
+            - docker save -output tmp-image.docke druid-wildshapes:latest
           services:
             - docker
+          artifacts: 
+            - tmp-image.docker
       - step:
           name: 'Tag and Push to Heroku'
           script:
+            - docker load --input ./tmp-image.docker
             - docker login --username $HEROKU_USERNAME --password=$HEROKU_PASSWORD $HEROKU_REGISTRY
             - docker tag druid-wildshapes:latest $HEROKU_REGISTRY/druid-wildshapes/web
             - docker push $HEROKU_REGISTRY/druid-wildshapes/web

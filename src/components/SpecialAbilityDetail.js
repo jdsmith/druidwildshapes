@@ -5,7 +5,7 @@ const SpecialAbilityDetail = ({specialAbilities}) => {
         return (
             specialAbilities.map((specialAbility) => (
                 <div>
-                    <span>{specialAbility.name}: </span>
+                    <strong>{specialAbility.name}: </strong>
                     <span>{specialAbility.desc}</span>
                 </div>
             ))

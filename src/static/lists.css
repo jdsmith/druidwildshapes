@@ -1,0 +1,29 @@
+/* Lists */
+
+.wildshape-list {
+    list-style-type: none;
+    margin-left: 0;
+    padding-left: 0;
+}
+
+.wildshape-list li {
+    float: left;
+    margin-bottom: 10px;
+    width: 50%;
+}
+
+.wildshape-list li a {
+    text-decoration: none;
+}
+
+@media only screen and (max-width: 550px) {
+    .wildshape-list {
+        display: block;
+        margin: 0 auto;
+        width: 45%;
+    }
+    .wildshape-list li {
+        float: none;
+        width: 100%;
+    }
+}

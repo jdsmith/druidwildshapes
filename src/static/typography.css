@@ -27,6 +27,15 @@ h1 {
     text-align: center;
 }
 
+.beast-details h2 {
+    font-family: 'Libre Baskerville', Georgia, serif;
+    font-size: 18px;
+    letter-spacing: .04em;
+    margin-bottom: 20px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
 form[name="druid-form"] fieldset {
     margin-bottom: 25px;
 }
@@ -39,7 +48,7 @@ form[name="druid-form"] input[type="number"] {
     display: block;
     margin: 0 auto;
     padding: 10px;
-    width: 40%;
+    width: 45%;
 }
 
 form[name="druid-form"] input[type=checkbox] {

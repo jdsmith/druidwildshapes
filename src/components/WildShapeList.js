@@ -12,7 +12,7 @@ const WildShapeList = ({wildShapes}) => {
     });
 
     return (
-        <ul>
+        <ul className="wildshape-list">
             {wildShapeListItems}
         </ul>
     )

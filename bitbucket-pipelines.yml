@@ -9,16 +9,16 @@ pipelines:
   branches:
     master:
       - step:
-        name: 'Run Jest Tests'
-        caches:
-          - node
-        script:
-          - npm install
-          - npm test
+          name: 'Run Jest Tests'
+          caches:
+            - node
+          script:
+            - npm install
+            - npm test
       - step:
-        name: 'Build Docker Container'
-        script:
-          - docker build -t druid-wildshapes:latest .
+          name: 'Build Docker Container'
+          script:
+            - docker build -t druid-wildshapes:latest .
 
   default:
     - step:

@@ -1,0 +1,60 @@
+/* Typography */
+@import url('https://fonts.googleapis.com/css?family=Libre+Baskerville:700|Montserrat');
+
+a:link, a:visited {
+    color: white;
+}
+
+body {
+    font-family: 'Montserrat', Helvetica, Arial, sans-serif;
+    /*font-family: @sans;*/
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+}
+
+input, p {
+    font-family: 'Montserrat', Helvetica, Arial, sans-serif;
+}
+
+h1 {
+    color: white;
+    font-family: 'Libre Baskerville', Georgia, serif;
+    /*font-family: @font;*/
+    font-size: 26px;
+    font-weight: bold;
+    letter-spacing: .04em;
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+form[name="druid-form"] fieldset {
+    margin-bottom: 25px;
+}
+
+form[name="druid-form"] input[type="number"] {
+    background: #6D7F8B;
+    /*background: @ltblue;*/
+    border: none;
+    color: white;
+    display: block;
+    margin: 0 auto;
+    padding: 10px;
+    width: 40%;
+}
+
+form[name="druid-form"] input[type=checkbox] {
+    display: block;
+    margin: 0 auto;
+}
+
+form[name="druid-form"] fieldset span {
+    color: #DECDB1;
+    /*color: @yellow;*/
+    display: block;
+    font-size: 11px;
+    font-weight: bold;
+    letter-spacing: .04em;
+    margin-bottom: 10px;
+    text-align: center;
+    text-transform: uppercase;
+}

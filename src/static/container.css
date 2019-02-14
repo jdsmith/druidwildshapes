@@ -1,0 +1,13 @@
+/* Container */
+
+body {
+    background-color: #1D3C51;
+    /*background-color: @bkblue;*/
+}
+
+.App {
+    margin: 0 auto;
+    min-width: 400px;
+    padding: 30px;
+    width: 30%;
+}

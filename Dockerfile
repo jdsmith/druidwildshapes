@@ -4,7 +4,7 @@ WORKDIR /root/app
 
 COPY . .
 
-RUN npm install 
+RUN npm ci 
 RUN npm run build
 
 EXPOSE 9001

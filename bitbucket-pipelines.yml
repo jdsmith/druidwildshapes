@@ -31,8 +31,17 @@ pipelines:
             - docker login --username $HEROKU_USERNAME --password=$HEROKU_PASSWORD $HEROKU_REGISTRY
             - docker tag druid-wildshapes:latest $HEROKU_REGISTRY/druid-wildshapes/web
             - docker push $HEROKU_REGISTRY/druid-wildshapes/web
+            - docker inspect registry.heroku.com/$APP_NAME/web --format={{.Id}} > WEB_DOCKER_IMAGE_ID
           services:
             - docker
+          artifacts:
+            - WEB_DOCKER_IMAGE_ID
+      - step:
+        name: Release on Heroku
+        script:
+          - export WEB_DOCKER_IMAGE_ID=$(cat WEB_DOCKER_IMAGE_ID)
+          - ./deploy.sh
+          - echo "Druid Wildshapes finished deploying."
   default:
     - step:
         name: 'Node test and build'

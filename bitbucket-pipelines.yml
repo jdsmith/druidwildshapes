@@ -40,7 +40,7 @@ pipelines:
           name: Release on Heroku
           script:
             - export WEB_DOCKER_IMAGE_ID=$(cat docker_image_id.txt)
-            - ./deploy.sh
+            - ./heroku_deploy.sh
             - echo "Druid Wildshapes finished deploying."
   default:
     - step:

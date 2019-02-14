@@ -31,7 +31,7 @@ pipelines:
             - docker login --username $HEROKU_USERNAME --password=$HEROKU_PASSWORD $HEROKU_REGISTRY
             - docker tag druid-wildshapes:latest $HEROKU_REGISTRY/druid-wildshapes/web
             - docker push $HEROKU_REGISTRY/druid-wildshapes/web
-            - docker inspect registry.heroku.com/$APP_NAME/web --format={{.Id}} > docker_image_id.txt
+            - docker inspect $HEROKU_REGISTRY/druid-wildshapes/web --format={{.Id}} > docker_image_id.txt
           services:
             - docker
           artifacts:

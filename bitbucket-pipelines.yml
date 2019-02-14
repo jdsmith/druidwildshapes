@@ -37,11 +37,11 @@ pipelines:
           artifacts:
             - docker_image_id.txt
       - step:
-        name: Release on Heroku
-        script:
-          - export WEB_DOCKER_IMAGE_ID=$(cat docker_image_id.txt)
-          - ./deploy.sh
-          - echo "Druid Wildshapes finished deploying."
+          name: Release on Heroku
+          script:
+            - export WEB_DOCKER_IMAGE_ID=$(cat docker_image_id.txt)
+            - ./deploy.sh
+            - echo "Druid Wildshapes finished deploying."
   default:
     - step:
         name: 'Node test and build'

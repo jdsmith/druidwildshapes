@@ -1,0 +1,8 @@
+/* Beast Details */
+.beast-details-stats {
+    line-height: 1.4em;
+}
+
+.beast-details-stats p, .beast-details-stats div {
+    margin-bottom: 15px;
+}

@@ -5,7 +5,7 @@ const ActionDetails = ({actions}) => {
         return (
             actions.map((action) => (
                 <div>
-                    <em>{action.name}: </em>
+                    <strong>{action.name}: </strong>
                     {action.desc}
                 </div>
             ))

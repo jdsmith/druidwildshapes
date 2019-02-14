@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
-import './App.css';
+import './static/App.css';
 import DruidContainer from './components/DruidContainer';
 import BeastDetailsContainer from './components/BeastDetailsContainer';
 

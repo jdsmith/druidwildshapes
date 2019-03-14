@@ -17,7 +17,7 @@ const BeastDetails = ({details}) => (
             </p>
             <p>
                 <strong>Hit Points: </strong>
-                <span>{details.hitpoints}</span>
+                <span>{details.hit_points}</span>
             </p>
             <p>
                 <strong>Speed: </strong>

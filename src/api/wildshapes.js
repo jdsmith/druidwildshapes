@@ -4,334 +4,334 @@ module.exports = [
     {
         name: 'Baboon',
         cr: cr.CR_ZERO,
-        id: 35
+        id: 'baboon'
     },
     {
         name: 'Badger',
         cr: cr.CR_ZERO,
-        id: 36
+        id: 'badger'
     },
     {
         name: 'Bat',
         cr: cr.CR_ZERO,
         canFly: true,
-        id: 42
+        id: 'bat'
     },
     {
         name: 'Cat',
         cr: cr.CR_ZERO,
-        id: 61
+        id: 'cat'
     },
     {
         name: 'Crab',
         cr: cr.CR_ZERO,
         canSwim: true,
-        id: 75
+        id: 'crab'
     },
     {
         name: 'Deer',
         cr: cr.CR_ZERO,
-        id: 82
+        id: 'deer'
     },
     {
         name: 'Eagle',
         cr: cr.CR_ZERO,
         canFly: true,
-        id: 96
+        id: 'eagle'
     },
     {
         name: 'Frog',
         cr: cr.CR_ZERO,
         canSwim: true,
-        id: 109
+        id: 'frog'
     },
     {
         name: 'Giant Fire Beetle',
         cr: cr.CR_ZERO,
-        id: 126
+        id: 'giant-fire-beetle'
     },
     {
         name: 'Goat',
         cr: cr.CR_ZERO,
-        id: 149
+        id: 'goat'
     },
     {
         name: 'Hawk',
         cr: cr.CR_ZERO,
         canFly: true,
-        id: 164
+        id: 'hawk'
     },
     {
         name: 'Hyena',
         cr: cr.CR_ZERO,
-        id: 174
+        id: 'hyena'
     },
     {
         name: 'Jackal',
         cr: cr.CR_ZERO,
-        id: 180
+        id: 'jackal'
     },
     {
         name: 'Lizard',
         cr: cr.CR_ZERO,
-        id: 189
+        id: 'lizard'
     },
     {
         name: 'Octopus',
         cr: cr.CR_ZERO,
         canSwim: true,
-        id: 212
+        id: 'octopus'
     },
     {
         name: 'Owl',
         cr: cr.CR_ZERO,
         canFly: true,
-        id: 218
+        id: 'owl'
     },
     {
         name: 'Quipper',
         cr: cr.CR_ZERO,
         canSwim: true,
-        id: 233
+        id: 'quipper'
     },
     {
         name: 'Rat',
         cr: cr.CR_ZERO,
-        id: 235
+        id: 'rat'
     },
     {
         name: 'Raven',
         cr: cr.CR_ZERO,
         canFly: true,
-        id: 236
+        id: 'raven'
     },
     {
         name: 'Scorpion',
         cr: cr.CR_ZERO,
-        id: 250
+        id: 'scorpion'
     },
     {
         name: 'Sea Horse',
         cr: cr.CR_ZERO,
         canSwim: true,
-        id: 253
+        id: 'sea-horse'
     },
     {
         name: 'Spider',
         cr: cr.CR_ZERO,
-        id: 262
+        id: 'spider'
     },
     {
         name: 'Vulture',
         cr: cr.CR_ZERO,
         canFly: true,
-        id: 296
+        id: 'vulture'
     },
     {
         name: 'Weasel',
         cr: cr.CR_ZERO,
-        id: 300
+        id: 'weasel'
     },
     {
         name: 'Blood Hawk',
         cr: cr.CR_ONE_EIGHTH,
         canFly: true,
-        id: 50
+        id: 'blood-hawk'
     },
     {
         name: 'Camel',
         cr: cr.CR_ONE_EIGHTH,
-        id: 59
+        id: 'camel'
     },
     {
         name: 'Flying Snake',
         cr: cr.CR_ONE_EIGHTH,
         canFly: true,
-        id: 107
+        id: 'flying-snake'
     },
     {
         name: 'Giant Crab',
         cr: cr.CR_ONE_EIGHTH,
         canSwim: true,
-        id: 122
+        id: 'giant-crab'
     },
     {
         name: 'Giant Rat',
         cr: cr.CR_ONE_EIGHTH,
-        id: 134
+        id: 'giant-rat'
     },
     {
         name: 'Giant Weasel',
         cr: cr.CR_ONE_EIGHTH,
-        id: 143
+        id: 'giant-weasel'
     },
     {
         name: 'Mastiff',
         cr: cr.CR_ONE_EIGHTH,
-        id: 197
+        id: 'mastiff'
     },
     {
         name: 'Mule',
         cr: cr.CR_ONE_EIGHTH,
-        id: 204
+        id: 'mule'
     },
     {
         name: 'Poisonous Snake',
         cr: cr.CR_ONE_EIGHTH,
-        id: 226
+        id: 'poisonous-snake'
     },
     {
         name: 'Pony',
         cr: cr.CR_ONE_EIGHTH,
-        id: 228
+        id: 'pony'
     },
     {
         name: 'Stirge',
         cr: cr.CR_ONE_EIGHTH,
         canFly: true,
-        id: 267
+        id: 'stirge'
     },
     {
         name: 'Axe Beak',
         cr: cr.CR_ONE_QUARTER,
         canFly: true,
-        id: 33
+        id: 'axe-beak'
     },
     {
         name: 'Boar',
         cr: cr.CR_ONE_QUARTER,
-        id: 52
+        id: 'bear'
     },
     {
         name: 'Constrictor Snake',
         cr: cr.CR_ONE_QUARTER,
-        id: 72
+        id: 'constrictor-snake'
     },
     {
         name: 'Draft Horse',
         cr: cr.CR_ONE_QUARTER,
-        id: 87
+        id: 'draft-horse'
     },
     {
         name: 'Elk',
         cr: cr.CR_ONE_QUARTER,
-        id: 100
+        id: 'elk'
     },
     {
         name: 'Giant Badger',
         cr: cr.CR_ONE_QUARTER,
-        id: 117
+        id: 'giant-badger'
     },
     {
         name: 'Giant Bat',
         cr: cr.CR_ONE_QUARTER,
         canFly: true,
-        id: 118
+        id: 'giant-bat'
     },
     {
         name: 'Giant Centipede',
         cr: cr.CR_ONE_QUARTER,
-        id: 120
+        id: 'giant-centipede'
     },
     {
         name: 'Giant Frog',
         cr: cr.CR_ONE_QUARTER,
-        id: 127
+        id: 'giant-frog'
     },
     {
         name: 'Giant Lizard',
         cr: cr.CR_ONE_QUARTER,
-        id: 130
+        id: 'giant-lizard'
     },
     {
         name: 'Giant Owl',
         cr: cr.CR_ONE_QUARTER,
-        id: 132
+        id: 'giant-owl'
     },
     {
         name: 'Giant Poisonous Snake',
         cr: cr.CR_ONE_QUARTER,
-        id: 133
+        id: 'giant-poisonous-snake'
     },
     {
         name: 'Giant Wolf Spider',
         cr: cr.CR_ONE_QUARTER,
-        id: 144
+        id: 'giant-wolf-spider'
     },
     {
         name: 'Panther',
         cr: cr.CR_ONE_QUARTER,
-        id: 220
+        id: 'panther'
     },
     {
         name: 'Riding Horse',
         cr: cr.CR_ONE_QUARTER,
-        id: 241
+        id: 'ridiing-horse'
     },
     {
         name: 'Wolf',
         cr: cr.CR_ONE_QUARTER,
-        id: 310
+        id: 'wolf'
     },
     {
         name: 'Ape',
         cr: cr.CR_ONE_HALF,
-        id: 28
+        id: 'ape'
     },
     {
         name: 'Black Bear',
         cr: cr.CR_ONE_HALF,
-        id: 46
+        id: 'black-bear'
     },
     {
         name: 'Crocodile',
         cr: cr.CR_ONE_HALF,
         canSwim: true,
-        id: 76
+        id: 'crocodile'
     },
     {
         name: 'Giant Goat',
         cr: cr.CR_ONE_HALF,
-        id: 128
+        id: 'giant-goat'
     },
     {
         name: 'Giant Sea Horse',
         cr: cr.CR_ONE_HALF,
         canSwim: true,
-        id: 137
+        id: 'giant-sea-horse'
     },
     {
         name: 'Giant Wasp',
         cr: cr.CR_ONE_HALF,
         canFly: true,
-        id: 142
+        id: 'giant-wasp'
     },
     {
         name: 'Reef Shark',
         cr: cr.CR_ONE_HALF,
         canSwim: true,
-        id: 238
+        id: 'reef-shark'
     },
     {
         name: 'Warhorse',
         cr: cr.CR_ONE_HALF,
-        id: 297
+        id: 'warhorse'
     },
     {
         name: 'Brown Bear',
         cr: cr.CR_ONE,
-        id: 56
+        id: 'brown-bear'
     },
     {
         name: 'Dire Wolf',
         cr: cr.CR_ONE,
-        id: 84
+        id: 'dire-wolf'
     },
     {
         name: 'Giant Eagle',
         cr: cr.CR_ONE,
         canFly: true,
-        id: 124
+        id: 'giant-eagle'
     },
     {
         name: 'Giant Hyena',

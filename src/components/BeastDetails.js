@@ -21,7 +21,7 @@ const BeastDetails = ({details}) => (
             </p>
             <p>
                 <strong>Speed: </strong>
-                <span>{details.speed}</span>
+                <span>{details.speed.walk}</span>
             </p>
             <p>
                 <strong>Strength: </strong>
@@ -53,11 +53,7 @@ const BeastDetails = ({details}) => (
             </p>
             <p>
                 <strong>Senses: </strong>
-                <span>{details.senses}</span>
-            </p>
-            <p>
-                <strong>Speed: </strong>
-                <span>{details.speed}</span>
+                <span>{details.senses.passive_perception}</span>
             </p>
             <SpecialAbilityDetail specialAbilities={details.special_abilities} />
             <ActionDetails actions={details.actions} />

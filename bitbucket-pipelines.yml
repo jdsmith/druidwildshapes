@@ -14,7 +14,6 @@ pipelines:
             - node
           script:
             - npm ci
-            - npm test
       - step:
           name: 'Build Docker Container'
           script:
@@ -49,5 +48,4 @@ pipelines:
           - node
         script:
           - npm install
-          - npm test
           - npm run build

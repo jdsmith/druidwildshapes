@@ -53,7 +53,7 @@ const BeastDetails = ({details}) => (
             </p>
             <p>
                 <strong>Senses: </strong>
-                <span>{details.senses.passive_perception}</span>
+                <span>{details.senses}</span>
             </p>
             <SpecialAbilityDetail specialAbilities={details.special_abilities} />
             <ActionDetails actions={details.actions} />

@@ -336,123 +336,123 @@ module.exports = [
     {
         name: 'Giant Hyena',
         cr: cr.CR_ONE,
-        id: 129
+        id: 'giant-hyena'
     },
     {
         name: 'Giant Octopus',
         cr: cr.CR_ONE,
         canSwim: true,
-        id: 131
+        id: 'giant-octopus'
     },
     {
         name: 'Giant Spider',
         cr: cr.CR_ONE,
-        id: 139
+        id: 'giant-spider'
     },
     {
         name: 'Giant Toad',
         cr: cr.CR_ONE,
-        id: 140
+        id: 'giant-toad'
     },
     {
         name: 'Giant Vulture',
         cr: cr.CR_ONE,
         canFly: true,
-        id: 141
+        id: 'giant-vulture'
     },
     {
         name: 'Lion',
         cr: cr.CR_ONE,
-        id: 188
+        id: 'lion'
     },
     {
         name: 'Tiger',
         cr: cr.CR_ONE,
-        id: 284
+        id: 'tiger'
     },
     {
         name: 'Cave Bear',
         cr: cr.CR_TWO,
-        id: 62
+        id: 'cave-bear'
     },
     {
         name: 'Giant Boar',
         cr: cr.CR_TWO,
-        id: 119
+        id: 'giant-boar'
     },
     {
         name: 'Giant Constrictor Snake',
         cr: cr.CR_TWO,
-        id: 121
+        id: 'giant-constrictor-snake'
     },
     {
         name: 'Giant Elk',
         cr: cr.CR_TWO,
-        id: 125
+        id: 'giant-elk'
     },
     {
         name: 'Hunter Shark',
         cr: cr.CR_TWO,
         canSwim: true,
-        id: 172
+        id: 'hunter-shark'
     },
     {
         name: 'Plesiosaurus',
         cr: cr.CR_TWO,
         canSwim: true,
-        id: 225
+        id: 'plesiosaurus'
     },
     {
         name: 'Polar Bear',
         cr: cr.CR_TWO,
-        id: 227
+        id: 'polar-bear'
     },
     {
         name: 'Rhinoceros',
         cr: cr.CR_TWO,
-        id: 240
+        id: 'rhinoceros'
     },
     {
         name: 'Saber-Toothed Tiger',
         cr: cr.CR_TWO,
-        id: 246
+        id: 'saber-toothed-tiger'
     },
     {
         name: 'Giant Scorpion',
         cr: cr.CR_THREE,
-        id: 136
+        id: 'giant-scorpion'
     },
     {
         name: 'Killer Whale',
         cr: cr.CR_THREE,
         canSwim: true,
-        id: 181
+        id: 'killer-whale'
     },
     {
         name: 'Elephant',
         cr: cr.CR_FOUR,
-        id: 99
+        id: 'elephant'
     },
     {
         name: 'Giant Crocodile',
         cr: cr.CR_FIVE,
         canSwim: true,
-        id: 123
+        id: 'giant-crocodile'
     },
     {
         name: 'Giant Shark',
         cr: cr.CR_FIVE,
         canSwim: true,
-        id: 138
+        id: 'giant-shark'
     },
     {
         name: 'Triceratops',
         cr: cr.CR_FIVE,
-        id: 287
+        id: 'triceratops'
     },
     {
         name: 'Mammoth',
         cr: cr.CR_SIX,
-        id: 194
+        id: 'mammoth'
     }
 ]

@@ -2,7 +2,7 @@ const axios = require('axios');
 
 async function getWildShapeDetails(request) {
     const { id } = request.params;
-    const url = `http://dnd5eapi.co/api/monsters/${id}/`;
+    const url = `https://api.open5e.com/monsters/${id}/`;
     try {
         const beastDetails = await axios.get(url);
         return beastDetails.data;

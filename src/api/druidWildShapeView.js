@@ -16,13 +16,12 @@ const shouldIncludeWildShape = (wildShape, { maxCR, canFly, canSwim }) => {
 
 const lookupWildShapesForLevel = (level, isCircleOfTheMoon) => {
     const levelString = level > 8 ? 'level8' : `level${level}`;
-    const wildShapeParams = druidLevels[levelString];
+    const wildShapeParams = {...druidLevels[levelString]};
     
     if (wildShapeParams) {
-        if (isCircleOfTheMoon && level > 2) {
+        if (isCircleOfTheMoon === 'true' && level > 2) {
             const circleOfTheMoonCR = level / 3
             wildShapeParams.maxCR = circleOfTheMoonCR < 1 ? 1 : circleOfTheMoonCR;
-            
         }
         const filteredWildShapes = wildShapes.filter(wildShape => shouldIncludeWildShape(wildShape, wildShapeParams));
         return filteredWildShapes;

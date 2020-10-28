@@ -21,7 +21,7 @@ class DruidContainer extends React.Component {
         })
         .then(response => response.data)
         .then(wildShapes => this.setState({
-            wildShapes: wildShapes
+            wildShapes,
         }))
         .catch(error => console.error(error));
     }
@@ -37,7 +37,7 @@ class DruidContainer extends React.Component {
 
     toggleCircleOfTheMoon(event) {
         const level = this.state.level;
-        const isCircleOfTheMoon = event.target.value;
+        const isCircleOfTheMoon = event.target.checked;
         this.setState({
             isCircleOfTheMoon
         });

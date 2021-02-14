@@ -1,10 +1,17 @@
-exports.CR_ZERO = 0;
-exports.CR_ONE_EIGHTH = 0.125
-exports.CR_ONE_QUARTER = 0.25;
-exports.CR_ONE_HALF = 0.5;
-exports.CR_ONE = 1;
-exports.CR_TWO = 2;
-exports.CR_THREE = 3;
-exports.CR_FOUR = 4;
-exports.CR_FIVE = 5;
-exports.CR_SIX = 6;
+export const CR_ONE_EIGHTH = '1/8';
+export const CR_ONE_QUARTER = '1/4';
+export const CR_ONE_HALF = '1/2';
+
+export const getChallengeRatingForLevel = (druidLevel) => {
+    if (druidLevel < 2) {
+        return null;
+    }
+    if (druidLevel < 4) {
+        return CR_ONE_QUARTER;
+    }
+    if (druidLevel < 8)
+        return CR_ONE_HALF;
+    return '1'
+};
+
+export default ['0', CR_ONE_EIGHTH, CR_ONE_QUARTER, CR_ONE_HALF, '1'];

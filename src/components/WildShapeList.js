@@ -1,12 +1,12 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-const WildShapeList = ({wildShapes}) => {
+const WildShapeList = ({wildShapes = []}) => {
     const wildShapeListItems = wildShapes.map((wildShape)=> {
-        const linkPath = `/wildshapes/${wildShape.id}`;
+        const linkPath = `/wildshapes/${wildShape.slug}`;
         return (<li key={wildShape.name}>
             <Link to={linkPath}>
-                {wildShape.name} {wildShape.cr}
+                {wildShape.name}
             </Link>
         </li>);
     });

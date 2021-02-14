@@ -7,9 +7,7 @@
 }
 
 .wildshape-list li {
-    float: left;
     margin-bottom: 10px;
-    width: 50%;
 }
 
 .wildshape-list li a {
@@ -23,7 +21,19 @@
         width: 45%;
     }
     .wildshape-list li {
-        float: none;
         width: 100%;
     }
+}
+
+.challenge-rating-section {
+    margin-bottom: 1.5em;
+}
+
+.challenge-rating-body {
+    display: none;
+}
+
+.challenge-rating-body.show-true {
+    display: block;
+    margin-top: 1em;
 }

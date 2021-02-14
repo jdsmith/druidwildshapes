@@ -1,4 +1,4 @@
-const getWildShapes = require('./src/api/druidWildShapeView');
+const getWildShapes = require('./src/api/open5eApi');
 const getWildShapeDetails = require('./src/api/wildShapeDetailsView');
 
 const Hapi = require('hapi');
@@ -16,11 +16,6 @@ const server = Hapi.server({
     host: '0.0.0.0'
 });
 const routes = [
-    {
-        method: 'GET',
-        path: '/api/wildshapes/{level}',
-        handler: getWildShapes
-    },
     {
         method: 'GET',
         path: '/api/wildshape/{id}',

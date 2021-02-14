@@ -9,13 +9,13 @@ const BeastDetailsContainer = ({ match }) => {
     const [errorMessage, setErrorMessage] = useState('');
 
     useEffect(() => {
-        try {
-            setBeastDetails(getWildShapeDetails(slug));
+        getWildShapeDetails(slug).then((details) => {
+            setBeastDetails(details);
             setErrorMessage('');
-        } catch (e) {
+        }).catch((e) => {
             console.error(e);
             setErrorMessage('We failed to retreive any details for this beast. Please try again later.');
-        }
+        });
     }, [])
 
     if (errorMessage) {

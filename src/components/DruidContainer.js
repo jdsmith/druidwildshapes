@@ -1,59 +1,65 @@
-import React from 'react';
-import Axios from 'axios';
+import React, { useEffect, useState } from 'react';
+import challengeRatings, { getChallengeRatingForLevel } from '../api/challengeRatings';
+import ChallengeRatingSection from './ChallengeRatingSection';
 import DruidForm from './DruidForm';
-import WildShapeList from './WildShapeList';
 
-class DruidContainer extends React.Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            wildShapes: []
+const DruidContainer = () => {
+    const [isCircleOfTheMoon, setIsCircleOfTheMoon] = useState(false);
+    const [canSwim, setCanSwim] = useState(false);
+    const [canFly, setCanFly] = useState(false);
+    const [maxCR, setMaxCR] = useState(null);
+    const [druidLevel, setDruidLevel] = useState(1);
+    const [challengeRatingSections, setChallengeRatingSections] = useState([]);
+
+    // update the max CR when level or circle of the moon changes
+    useEffect(() => {
+        setCanSwim(druidLevel > 3);
+        setCanFly(druidLevel > 7);
+        if (isCircleOfTheMoon) {
+            setMaxCR(druidLevel > 3 ? druidLevel / 3 : 1)
+        } else {
+            setMaxCR(getChallengeRatingForLevel(druidLevel));
         }
-        this.onLevelChange = this.onLevelChange.bind(this);
-        this.toggleCircleOfTheMoon = this.toggleCircleOfTheMoon.bind(this);
-    }
+    }, [isCircleOfTheMoon, druidLevel])
 
-    fetchWildShapes(level, isCircleOfTheMoon) {
-        return Axios.get(`/api/wildshapes/${level}`, {
-            params: {
-                isCircleOfTheMoon
+    // update the displayed challenge ratings when maxCr changes
+    useEffect(() => {
+        const sections = []
+        for(let i=0; i<challengeRatings.length; i++) {
+            const challengeRating = challengeRatings[i]
+            sections.push(
+                <ChallengeRatingSection
+                    challengeRating={challengeRating}
+                    canFly={canFly}
+                    canSwim={canSwim}
+                />
+            );
+            if (challengeRating === maxCR) {
+                break;
             }
-        })
-        .then(response => response.data)
-        .then(wildShapes => this.setState({
-            wildShapes,
-        }))
-        .catch(error => console.error(error));
-    }
+        }
 
-    onLevelChange(event) {
-        const level = event.target.value;
-        const isCircleOfTheMoon = this.state.isCircleOfTheMoon;
-        this.setState({
-            level
-        });
-        this.fetchWildShapes(level, isCircleOfTheMoon);
-    }
+        // circle of the moon sections
+        for(let i=2;  i < Number(maxCR); i++) {
+            sections.push(
+                <ChallengeRatingSection
+                    challengeRating={i}
+                    canFly={canFly}
+                    canSwim={canSwim}
+                />
+            );
+        }
+        setChallengeRatingSections(sections);
+    }, [maxCR]);
 
-    toggleCircleOfTheMoon(event) {
-        const level = this.state.level;
-        const isCircleOfTheMoon = event.target.checked;
-        this.setState({
-            isCircleOfTheMoon
-        });
-        this.fetchWildShapes(level, isCircleOfTheMoon);
-    }
-
-    render() {
-        return (
-            <div>
-                <DruidForm 
-                    onLevelChange={this.onLevelChange} 
-                    toggleCircleOfTheMoon={this.toggleCircleOfTheMoon} />
-                <WildShapeList wildShapes={this.state.wildShapes} />
-            </div>
-        );
-    }
-}
+    return (
+        <React.Fragment>
+            <DruidForm 
+                onLevelChange={level => setDruidLevel(level)} 
+                toggleCircleOfTheMoon={value => setIsCircleOfTheMoon(value)} />
+            {maxCR != null && challengeRatingSections}
+        </React.Fragment>
+    );
+};
 
 export default DruidContainer;

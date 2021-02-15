@@ -3,3 +3,4 @@ build/
 .history
 .vscode
 .idea/
+heroku_deploy.sh

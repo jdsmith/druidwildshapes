@@ -1,6 +1,3 @@
-const getWildShapes = require('./src/api/druidWildShapeView');
-const getWildShapeDetails = require('./src/api/wildShapeDetailsView');
-
 const Hapi = require('hapi');
 const Path = require('path');
 const Inert = require('inert');
@@ -16,16 +13,6 @@ const server = Hapi.server({
     host: '0.0.0.0'
 });
 const routes = [
-    {
-        method: 'GET',
-        path: '/api/wildshapes/{level}',
-        handler: getWildShapes
-    },
-    {
-        method: 'GET',
-        path: '/api/wildshape/{id}',
-        handler: getWildShapeDetails
-    },
     {
         method: 'GET',
         path: '/wildshapes/{path*}',

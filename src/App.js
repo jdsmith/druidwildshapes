@@ -12,7 +12,7 @@ class App extends Component {
           <h1>Druid Wild Shapes</h1>
           <Route exact path="/" component={DruidContainer} />
           <Route exact path="/wildshapes/" component={BeastDetailsContainer} />
-          <Route path="/wildshapes/:id/" component={BeastDetailsContainer} />
+          <Route path="/wildshapes/:slug/" component={BeastDetailsContainer} />
         </div>
       </Router>
     );

@@ -4,3 +4,4 @@ build/
 .vscode
 .idea/
 heroku_deploy.sh
+.DS_Store

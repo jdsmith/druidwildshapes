@@ -1,8 +1,0 @@
-node_modules
-build
-.vscode
-.history
-README.md
-.eslintrc.js
-.gitignore
-bitbucket-pipelines.yml

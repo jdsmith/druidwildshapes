@@ -3,30 +3,22 @@
 .wildshape-list {
     list-style-type: none;
     margin-left: 0;
-    padding-left: 0;
+    max-width: 220px;
+    margin: 0 auto;
 }
 
 .wildshape-list li {
     margin-bottom: 10px;
-}
-
-.wildshape-list li a {
-    text-decoration: none;
-}
-
-@media only screen and (max-width: 550px) {
-    .wildshape-list {
-        display: block;
-        margin: 0 auto;
-        width: 45%;
-    }
-    .wildshape-list li {
-        width: 100%;
-    }
+    cursor: pointer;
 }
 
 .challenge-rating-section {
     margin-bottom: 1.5em;
+}
+
+.challenge-rating-section h3 {
+    text-align: center;
+    cursor: pointer;
 }
 
 .challenge-rating-body {
@@ -36,4 +28,28 @@
 .challenge-rating-body.show-true {
     display: block;
     margin-top: 1em;
+}
+
+.challenge-ratings {
+    height: 390px;
+    overflow-y: scroll;
+}
+
+@media only screen and (min-width: 800px) {
+    .wildshape-list {
+        width: 100%;
+        margin: 0;
+        padding-left: 15px;
+    }
+
+    .challenge-rating-section h3 {
+        text-align: left;
+    }
+}
+
+@media only screen and (min-height: 800px) {
+    .challenge-ratings {
+        height: 600px;
+        overflow-y: scroll;
+    }
 }

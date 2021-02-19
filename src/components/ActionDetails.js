@@ -4,7 +4,7 @@ const ActionDetails = ({actions}) => {
     if (actions) {
         return (
             actions.map((action) => (
-                <div>
+                <div key={action.name}>
                     <strong>{action.name}: </strong>
                     {action.desc}
                 </div>

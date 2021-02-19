@@ -4,7 +4,7 @@ const SpecialAbilityDetail = ({specialAbilities}) => {
     if (specialAbilities) {
         return (
             specialAbilities.map((specialAbility) => (
-                <div>
+                <div key={specialAbility.name}>
                     <strong>{specialAbility.name}: </strong>
                     <span>{specialAbility.desc}</span>
                 </div>

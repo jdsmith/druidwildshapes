@@ -1,8 +1,31 @@
 /* Beast Details */
 .beast-details-stats {
     line-height: 1.4em;
+    border: 1px solid #fff;
+    padding: 20px 15px;
 }
 
 .beast-details-stats p, .beast-details-stats div {
     margin-bottom: 15px;
+}
+
+.beast-details {
+    margin: 0 1em;
+}
+
+
+.back-button {
+    display: inline-block;
+    position: absolute;
+    left: 15px;
+}
+
+@media only screen and (min-width: 800px) {
+    .beast-details {
+        margin: 0;
+    }
+
+    .back-button {
+        display: none;
+    }
 }

@@ -4,6 +4,8 @@
 ## run unit tests
 `npm test`
 
-## Build and run
+## production build
 `npm run build`
-`node server.js`
+
+## dev testing
+`npm run start:webpack`

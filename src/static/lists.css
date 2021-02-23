@@ -3,7 +3,7 @@
 .wildshape-list {
     list-style-type: none;
     margin-left: 0;
-    max-width: 220px;
+    max-width: 240px;
     margin: 0 auto;
 }
 
@@ -50,6 +50,7 @@
 @media only screen and (min-height: 800px) {
     .challenge-ratings {
         height: 600px;
-        overflow-y: scroll;
+        overflow-y: auto;
+        padding-right: 10px;
     }
 }

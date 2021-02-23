@@ -17,8 +17,10 @@
 
 .back-button {
     display: inline-block;
-    position: absolute;
-    left: 15px;
+    border: none; 
+    background: none;
+    color: #fff;
+    padding-bottom: 15px;
 }
 
 @media only screen and (min-width: 800px) {

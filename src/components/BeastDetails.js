@@ -1,6 +1,8 @@
 import React from 'react';
 import SpecialAbilityDetail from './SpecialAbilityDetail';
 import ActionDetails from './ActionDetails';
+import { faArrowLeft } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 const Resistances = ({
     damageResistances,
@@ -52,10 +54,12 @@ const BeastDetails = ({ details, onBeastSelect }) => {
 
     return (
         <div className="beast-details">
+            <button className="back-button" onClick={() => onBeastSelect('')}>
+                <FontAwesomeIcon icon={faArrowLeft} />
+                &nbsp;
+                Back To Beasts
+            </button>
             <h2>
-                <button className="back-button" onClick={() => onBeastSelect('')}>
-                    Back to Beasts
-                </button>
                 {name}
             </h2>
 

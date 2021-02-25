@@ -8,6 +8,11 @@ class App extends Component {
         <main className="App">
           <h1>Druid Wild Shapes</h1>
           <DruidContainer />
+          <footer>
+            <a href="https://open5e.com/">
+              Powered by the Open5e API
+            </a>
+          </footer>
         </main>
     );
   }

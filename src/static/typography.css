@@ -69,6 +69,11 @@ form[name="druid-form"] fieldset span {
     text-transform: uppercase;
 }
 
+footer {
+    text-align: center;
+    margin-top: 2em;
+}
+
 @media only screen and (min-width: 800px) {
     form[name="druid-form"] fieldset span {
         text-align: left;
@@ -82,5 +87,10 @@ form[name="druid-form"] fieldset span {
     h1 {
         text-align: left;
         margin-left: 15px;
+    }
+
+    footer {
+        text-align: left;
+        padding-left: 15px;
     }
   }

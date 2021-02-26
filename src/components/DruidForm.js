@@ -8,7 +8,7 @@ const DruidForm = ({onLevelChange, toggleCircleOfTheMoon}) => (
     </fieldset>
     <fieldset>
         <span>Circle of the Moon</span>
-        <input type="checkbox" name="isCircleOfTheMoon" onChange={event => toggleCircleOfTheMoon(event.target.value)}/>
+        <input type="checkbox" name="isCircleOfTheMoon" onChange={event => toggleCircleOfTheMoon(event.target.checked)}/>
     </fieldset>
     </form>
 )

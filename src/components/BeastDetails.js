@@ -47,6 +47,8 @@ const BeastDetails = ({ details, onBeastSelect }) => {
         senses,
         special_abilities,
         actions,
+        document__title: sourceTitle,
+        document__slug: sourceSlug,
     } = details;
 
     const { walk, fly, swim } = speed;
@@ -62,6 +64,7 @@ const BeastDetails = ({ details, onBeastSelect }) => {
             <h2>
                 {name}
             </h2>
+            <h3>Source: {sourceSlug === 'wotc-srd' ? 'Core Rules (SRD)' : sourceTitle} </h3>
 
             <div className="beast-details-stats">
                 <p>

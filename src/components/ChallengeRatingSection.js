@@ -3,18 +3,18 @@ import { getWildShapes } from '../api/open5eApi';
 import WildShapeList from './WildShapeList';
 
 
-export const ChallengeRatingSection = ({ challengeRating = null, canSwim = false, canFly = false , onBeastSelect}) => {
+export const ChallengeRatingSection = ({ challengeRating = null, druidLevel , onBeastSelect}) => {
     const [isExpanded, setIsExpanded] = useState(false);
     const [beastList, setBeastList] = useState([]);
     const [errorMessage, setErrorMessage] = useState('');
 
-    const filterSwimmingAndFlying = () => (
-        beastList.filter(beast => {
+    const filterSwimmingAndFlying = (list = []) => (
+        list.filter(beast => {
             const { speed: { swim = null, fly = null } } = beast;
-            if (swim && !canSwim) {
+            if (swim && druidLevel < 4) {
                 return false;
             }
-            if (fly && !canFly) {
+            if (fly && druidLevel < 8) {
                 return false;
             }
             return true;
@@ -25,7 +25,7 @@ export const ChallengeRatingSection = ({ challengeRating = null, canSwim = false
         async function fetchBeastList () {
             try {
                 const list = await getWildShapes(challengeRating);
-                setBeastList(list);
+                setBeastList(filterSwimmingAndFlying(list));
                 setErrorMessage('');
             } catch (error) {
                 setErrorMessage('Something went wrong while retrieving these beasts. Please try again later.');
@@ -37,8 +37,10 @@ export const ChallengeRatingSection = ({ challengeRating = null, canSwim = false
     }, []);
 
     useEffect(() => {
-        setBeastList(filterSwimmingAndFlying());
-    }, [canFly, canSwim]);
+        if(beastList.length) {
+            setBeastList(filterSwimmingAndFlying(beastList));
+        }
+    }, [druidLevel]);
 
     return (
         <section className="challenge-rating-section">

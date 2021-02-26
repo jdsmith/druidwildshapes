@@ -6,6 +6,7 @@ import BeastDetailsContainer from './BeastDetailsContainer';
 
 const DruidContainer = () => {
     const [isCircleOfTheMoon, setIsCircleOfTheMoon] = useState(false);
+    const [limitSRD, setLimitSRD] = useState(false);
     const [druidLevel, setDruidLevel] = useState(1);
     const [challengeRatingSections, setChallengeRatingSections] = useState([]);
     const [selectedBeastSlug, setSelectedBeastSlug] = useState('');
@@ -18,6 +19,7 @@ const DruidContainer = () => {
         const sections = []
         const beastListProps = {
             druidLevel,
+            limitSRD,
             onBeastSelect: onBeastSelect
         }
         const challengeRatings = getChallengeRatingsForLevel(druidLevel, isCircleOfTheMoon);
@@ -32,14 +34,15 @@ const DruidContainer = () => {
             );
         }
         setChallengeRatingSections(sections);
-    }, [isCircleOfTheMoon, druidLevel]);
+    }, [isCircleOfTheMoon, druidLevel, limitSRD]);
 
     return (
         <section id="druidContainer">
             <section id="beastSelection" className={!!selectedBeastSlug ? 'sm-hidden' : ''}>
                 <DruidForm 
                     onLevelChange={level => setDruidLevel(level)} 
-                    toggleCircleOfTheMoon={value => setIsCircleOfTheMoon(value)} />
+                    toggleCircleOfTheMoon={value => setIsCircleOfTheMoon(value)}
+                    toggleLimitSRD={value => setLimitSRD(value)} />
                 <div className='challenge-ratings'>
                     {challengeRatingSections}
                 </div>

@@ -57,7 +57,7 @@ form[name="druid-form"] input[type=checkbox] {
     margin: 0 auto;
 }
 
-form[name="druid-form"] fieldset span {
+form[name="druid-form"] fieldset label {
     color: #DECDB1;
     /*color: @yellow;*/
     display: block;
@@ -75,7 +75,7 @@ footer {
 }
 
 @media only screen and (min-width: 800px) {
-    form[name="druid-form"] fieldset span {
+    form[name="druid-form"] fieldset label {
         text-align: left;
     }
 

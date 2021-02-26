@@ -6,6 +6,7 @@ import WildShapeList from './WildShapeList';
 export const ChallengeRatingSection = ({ challengeRating = null, druidLevel , onBeastSelect}) => {
     const [isExpanded, setIsExpanded] = useState(false);
     const [beastList, setBeastList] = useState([]);
+    const [filteredList, setFilteredList] = useState([]);
     const [errorMessage, setErrorMessage] = useState('');
 
     const filterSwimmingAndFlying = (list = []) => (
@@ -25,7 +26,8 @@ export const ChallengeRatingSection = ({ challengeRating = null, druidLevel , on
         async function fetchBeastList () {
             try {
                 const list = await getWildShapes(challengeRating);
-                setBeastList(filterSwimmingAndFlying(list));
+                setBeastList(list);
+                setFilteredList(filterSwimmingAndFlying(list));
                 setErrorMessage('');
             } catch (error) {
                 setErrorMessage('Something went wrong while retrieving these beasts. Please try again later.');
@@ -38,15 +40,15 @@ export const ChallengeRatingSection = ({ challengeRating = null, druidLevel , on
 
     useEffect(() => {
         if(beastList.length) {
-            setBeastList(filterSwimmingAndFlying(beastList));
+            setFilteredList(filterSwimmingAndFlying(beastList));
         }
     }, [druidLevel]);
 
     return (
         <section className="challenge-rating-section">
-            <h3 onClick={() => setIsExpanded(!isExpanded)}>Challenge Rating {challengeRating} ({beastList.length})</h3>
+            <h3 onClick={() => setIsExpanded(!isExpanded)}>Challenge Rating {challengeRating} ({filteredList.length})</h3>
             <div className={`challenge-rating-body show-${isExpanded}`}>
-                <WildShapeList wildShapes={beastList} onBeastSelect={onBeastSelect}/>
+                <WildShapeList wildShapes={filteredList} onBeastSelect={onBeastSelect}/>
                 {errorMessage && <span class="error">{errorMessage}</span>}
             </div>
         </section>
